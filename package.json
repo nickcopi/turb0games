@@ -1,0 +1,20 @@
+{
+  "name": "portfoliobuilder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node generator.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "fs-extra": "^9.0.1",
+    "md5": "^2.3.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "simple-git": "^2.18.0"
+  }
+}

@@ -1,0 +1,48 @@
+{
+	"options":{
+		"name":"Turb0",
+		"title":"Turb0 Games",
+		"bio":"",
+		"blogURL":"",
+		"gitlabURL":""
+	},
+	"targets":[
+		"index.html"
+	],
+	"categories":[
+		{
+			"category": "Starred",
+			"animation":"stars"
+		},
+		{
+			"category": "Cyber",
+			"animation":"hexFall"
+		},
+		{
+			"category": "All",
+			"animation":"snowFall"
+		},
+		{
+			"category": "Visualizations",
+			"animation":"parametric"
+		},
+		{
+			"category": "Games",
+			"animation":"game"
+		},
+		{
+			"category": "Websites",
+			"animation":"astar"
+		},
+		{
+			"category": "Tools"
+		}
+	],
+	"games":[
+		{ 
+			"rating":4,
+			"repo":"https://gitlab.com/NickCopi/coloredstaticgenerator.git",
+			"tags":["Visualizations"]
+		}
+	]
+}

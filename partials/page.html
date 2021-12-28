@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="../../static/bootstrap.min.css">
+		<script src="../../static/jquery.min.js"></script>
+		<script src="../../static/bootstrap.min.js"></script>
+		<script src="../../static/embeder.js"></script>
+		<title>{{!title}}</title>
+		<style>
+body,html {
+	height: 100%;
+}
+		</style>
+	</head>
+	<body>
+		{{#navbar}}
+		<div class="container d-flex h-400 col-10 mt-5">
+			<div class="row align-self-center w-100">
+				<div class="col-12 mx-auto">
+					<div class="jumbotron">
+						<iframe id="iframe" width={{!width}} height={{!height}} class="m-3" style="display:none;background-color:white" title="{{!name}}/{{!file}}"></iframe>
+						<div class="container d-flex">
+							<div class="col-8">
+								<h1 class="display-3">{{!name}}</h1>
+								<div>
+									<a class="btn btn-primary btn-lg" style="display:{{!embedDisplay}}" id="embed" role="button">Embed</a>
+									<a class="btn btn-primary btn-lg" target="_blank" href="{{!repo}}" role="button">Repository</a>
+								</div>
+							</div>
+							<div class="row">
+								<img src="thumbnail.png" style="width:15em">
+							</div>
+						</div>
+						<hr class="my-4">
+						<p class="lead">
+						<p class="lead">{{!description}}</p>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

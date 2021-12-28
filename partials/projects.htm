@@ -1,0 +1,26 @@
+<div class="container-fluid">
+	<div class = "row">
+		<div class="col-md-2" style="flex: 0 0 20%;max-width: 20%;">
+			<div class="jumbotron mt-5 sticky-top">
+				<h4 class="display-5">Category</h4>
+				<p>Select a category of project to view.</p>
+				<!-- Rounded switch -->
+				<h4 class="display-5">Animations</h4>
+				<label class="switch">
+					<input id="animationsToggle" checked type="checkbox">
+					<span class="slider round"></span>
+				</label>
+				<hr class="my-4">
+				<p class="lead">
+				{{@category}}
+				</p>
+			</div>
+		</div>
+		<div class="col-md-10" style="flex: 0 0 80%;max-width: 80%;">
+			<div class="container-fluid">
+				<div class="row">
+					{{@projectcard}}
+				</div>
+			</div>
+		</div>
+	</div>

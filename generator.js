@@ -1,6 +1,7 @@
 const fs = require('fs-extra');
 const rimraf = require('rimraf');
 const mkdirp = require('mkdirp');
+require('dotenv').config();
 const config = require('./config.json');
 
 const {newThumbnail} = require('./thumbnailMaker');
@@ -13,6 +14,11 @@ const arrays = {
 	category:[]
 };
 
+const buildRepoString = repo=>{
+	const split = repo.split('https://')
+	split[1] = `${process.env.GIT_USER}:${process.env.GITLAB_TOKEN}@${split[1]}`;
+	return split.join('https://');
+}
 
 const readUntilClose = (line,index)=>{
 	let content = '';
@@ -84,7 +90,7 @@ const pullRepoConfig = async project=>{
 	mkdirp.sync(tempPath);
 	const git = require('simple-git/promise')(tempPath);
 	await git.init(false);
-	await git.addRemote('origin', repo);
+	await git.addRemote('origin', buildRepoString(repo));
 	await git.fetch('origin').catch(e=>{
 		console.error(e);
 		console.error(`Failed to fetch remote, ${repo}.`)
@@ -110,11 +116,12 @@ const pullRepoConfig = async project=>{
 			}
 			//const embedPath = projectPath + '/' + name;
 			const git = require('simple-git/promise')(projectPath);
-			await git.raw(['clone','--depth','1', repo]);
+			await git.raw(['clone','--depth','1', buildRepoString(repo)]);
 			rimraf.sync(projectPath + '/' + name + '/.git/');
 			try{
 				fs.copySync(projectPath + '/' + name, projectPath + '/' + embedConfig.name);
-			} catch(e){}
+				rimraf.sync(projectPath + '/' + name);
+			} catch(e){console.error('Embed Clone Error',e)}
 		}
 		const page = fs.readFileSync('./partials/page.html').toString();
 		const newPage = page.split('\n').map(line=>{

@@ -5,7 +5,7 @@
 		<script src="../../static/jquery.min.js"></script>
 		<script src="../../static/bootstrap.min.js"></script>
 		<script src="../../static/embeder.js"></script>
-		<title>{{!title}}</title>
+		<title>{{!name}} - {{!title}}</title>
 		<style>
 body,html {
 	height: 100%;
@@ -18,13 +18,12 @@ body,html {
 			<div class="row align-self-center w-100">
 				<div class="col-12 mx-auto">
 					<div class="jumbotron">
-						<iframe id="iframe" width={{!width}} height={{!height}} class="m-3" style="display:none;background-color:white" title="{{!name}}/{{!file}}"></iframe>
+						<iframe id="iframe" width={{!width}} height={{!height}} class="m-3" style="display:none;border-style:none;background-color:white" title="{{!name}}/{{!file}}"></iframe>
 						<div class="container d-flex">
 							<div class="col-8">
 								<h1 class="display-3">{{!name}}</h1>
 								<div>
-									<a class="btn btn-primary btn-lg" style="display:{{!embedDisplay}}" id="embed" role="button">Embed</a>
-									<a class="btn btn-primary btn-lg" target="_blank" href="{{!repo}}" role="button">Repository</a>
+									{{!description}}
 								</div>
 							</div>
 							<div class="row">
@@ -33,7 +32,7 @@ body,html {
 						</div>
 						<hr class="my-4">
 						<p class="lead">
-						<p class="lead">{{!description}}</p>
+						<p class="lead">{{!instructions}}</p>
 						</p>
 					</div>
 				</div>

@@ -4,12 +4,12 @@
 		console.log('toggling');
 		const iframe = $("#iframe")[0];
 		if(!embeded){
-			location.hash = 'embed';
+			//location.hash = 'embed';
 			$("#iframe").show();
 			iframe.src = iframe.title;
 		} else {
 			$("#iframe").hide();
-			location.hash = '';
+			//location.hash = '';
 			iframe.src='';
 
 		}
@@ -17,7 +17,8 @@
 
 	}
 	window.addEventListener('load',()=>{
-		if(location.hash === '#embed') toggleEmbed();
-		$("#embed").click(toggleEmbed);
+		//if(location.hash === '#embed')
+		toggleEmbed();
+		//$("#embed").click(toggleEmbed);
 	});
 })()

@@ -11,38 +11,27 @@
 	],
 	"categories":[
 		{
-			"category": "Starred",
+			"category": "All",
 			"animation":"stars"
 		},
 		{
-			"category": "Cyber",
+			"category": "Unfinished",
 			"animation":"hexFall"
 		},
 		{
-			"category": "All",
-			"animation":"snowFall"
-		},
-		{
-			"category": "Visualizations",
-			"animation":"parametric"
-		},
-		{
-			"category": "Games",
-			"animation":"game"
-		},
-		{
-			"category": "Websites",
+			"category": "Jam",
 			"animation":"astar"
 		},
 		{
-			"category": "Tools"
+			"category": "Needs Art",
+			"animation":"parametric"
 		}
 	],
 	"games":[
 		{ 
-			"rating":4,
-			"repo":"https://gitlab.com/NickCopi/coloredstaticgenerator.git",
-			"tags":["Visualizations"]
+			"rating":2,
+			"repo":"https://gitlab.com/NickCopi/djam3.git",
+			"tags":["Unfinished"]
 		}
 	]
 }

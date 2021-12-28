@@ -1,0 +1,6 @@
+build/
+gittemp/
+node_modules/
+*.swp
+package-lock.json
+.env

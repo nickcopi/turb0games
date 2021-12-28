@@ -98,11 +98,16 @@ const pullRepoConfig = async project=>{
 	await git.raw(['checkout',`origin/${branch}`,`--`,'.embed']).catch(e=>{
 		console.error(`Failed to pull ${repo} from the repository.`);
 	});
+	const instructionsPath = tempPath + '/.embed/instructions.md';
+	const instructions = {};
+	if(fs.existsSync(instructionsPath))
+		instructions.instructions = fs.readFileSync(instructionsPath).toString().split('\n').join('<br>');
 	try{
 		let embedConfig = require(tempPath + '/.embed/config.json');
 		embedConfig = {
 			...embedConfig,
-			...project
+			...project,
+			...instructions
 		};
 		arrays.projectcard.push(embedConfig);
 		const projectPath = './build/games/' + embedConfig.name;
@@ -119,8 +124,7 @@ const pullRepoConfig = async project=>{
 			await git.raw(['clone','--depth','1', buildRepoString(repo)]);
 			rimraf.sync(projectPath + '/' + name + '/.git/');
 			try{
-				fs.copySync(projectPath + '/' + name, projectPath + '/' + embedConfig.name);
-				rimraf.sync(projectPath + '/' + name);
+				fs.renameSync(projectPath + '/' + name, projectPath + '/' + embedConfig.name);
 			} catch(e){console.error('Embed Clone Error',e)}
 		}
 		const page = fs.readFileSync('./partials/page.html').toString();
@@ -171,6 +175,7 @@ const init = async ()=>{
 		fs.writeFileSync('./build/' + page.target,page.content);
 	});
 	fs.copySync('./static','./build/static');
+	console.log('Finished build at ./build');
 }
 
 init();

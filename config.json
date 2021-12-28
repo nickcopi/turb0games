@@ -23,7 +23,7 @@
 			"animation":"astar"
 		},
 		{
-			"category": "Needs Art",
+			"category": "Need Art",
 			"animation":"parametric"
 		}
 	],
@@ -32,6 +32,31 @@
 			"rating":2,
 			"repo":"https://gitlab.com/NickCopi/djam3.git",
 			"tags":["Unfinished"]
+		},
+		{ 
+			"rating":4,
+			"repo":"https://gitlab.com/NickCopi/graveyardgathering.git",
+			"tags":[]
+		},
+		{ 
+			"rating":7,
+			"repo":"https://gitlab.com/NickCopi/timeless.git",
+			"tags":[]
+		},
+		{ 
+			"rating":3,
+			"repo":"https://gitlab.com/NickCopi/subduction.git",
+			"tags":[]
+		},
+		{ 
+			"rating":6,
+			"repo":"https://gitlab.com/NickCopi/onlinegamesimulator.git",
+			"tags":[]
+		},
+		{ 
+			"rating":6,
+			"repo":"https://gitlab.com/NickCopi/fromthejawsofdeath.git",
+			"tags":["Jam"]
 		}
 	]
 }

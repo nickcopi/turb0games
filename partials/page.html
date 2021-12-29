@@ -18,18 +18,17 @@ body,html {
 			<div class="row align-self-center w-100">
 				<div class="col-12 mx-auto">
 					<div class="jumbotron">
-						<center><iframe id="iframe" width={{!width}} height={{!height}} class="m-3" style="display:none;border-style:none;background-color:white" title="{{!name}}/{{!file}}"></iframe></center>
 						<div class="container d-flex">
 							<div class="col-8">
-								<h1 class="display-3">{{!name}}</h1>
-								<div>
-									{{!description}}
-								</div>
+								<h1 class="display-1">{{!name}}</h1>
 							</div>
-							<div class="row">
-								<img src="thumbnail.png" style="width:15em">
+							<div class="col-4" style="align-self:center;margin:2vw;">
+								{{!description}}
 							</div>
 						</div>
+						<center>
+							<iframe id="iframe" width={{!width}} height={{!height}} class="m-3" style="display:none;border-style:none;background-color:white" title="{{!name}}/{{!file}}"></iframe>
+						</center>
 						<hr class="my-4">
 						<p class="lead">
 						<p class="lead">{{!instructions}}</p>

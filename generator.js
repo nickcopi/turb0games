@@ -109,7 +109,8 @@ const pullRepoConfig = async project=>{
 			...project,
 			...instructions
 		};
-		arrays.projectcard.push(embedConfig);
+		if(!embedConfig.unlisted)
+			arrays.projectcard.push(embedConfig);
 		const projectPath = './build/games/' + embedConfig.name;
 		fs.copySync(tempPath + '/.embed', projectPath);
 		if(!fs.existsSync(projectPath + '/thumbnail.png'))

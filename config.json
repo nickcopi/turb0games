@@ -30,6 +30,7 @@
 	"games":[
 		{ 
 			"rating":2,
+			"unlisted":true,
 			"repo":"https://gitlab.com/NickCopi/djam3.git",
 			"tags":["Unfinished"]
 		},

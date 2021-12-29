@@ -17,19 +17,11 @@ build prod:
          - build/    
       expire_in: 1 hour
 deploy prod:  
-   image: python:latest  
-   stage: deploy  
-   only:    
-      - tags  
+   image: 
+      name: amazon/aws-cli  
+      entrypoint: [""]
+   stage: deploy
+   only:
+      - tags
    script:    
-      - pip install awscli    
-      - aws s3 sync ./build s3://www.turb0.one
-      #deploy prod:  
-      #   image: 
-      #      name: amazon/aws-cli  
-      #      entrypoint: [""]
-      #   stage: deploy
-      #   only:
-      #      - tags
-      #   script:    
-      #      - aws s3 sync ./build s3://games.turb0.one
+      - aws s3 sync ./build s3://games.turb0.one

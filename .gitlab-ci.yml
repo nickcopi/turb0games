@@ -1,0 +1,27 @@
+stages:  
+   - build  
+   - deploy
+build prod:  
+   image: node:12.10.0
+   stage: build  
+   only:    
+      - tags  
+   script:    
+      # Install dependencies    
+      - npm install    
+      # Build App    
+      - npm run build  
+   artifacts:    
+      paths:      
+         # Build folder      
+         - build/    
+      expire_in: 1 hour
+deploy prod:  
+   image: 
+      name: amazon/aws-cli  
+      entrypoint: [""]
+   stage: deploy
+   only:
+      - tags
+   script:    
+      - aws s3 sync ./build s3://games.turb0.one

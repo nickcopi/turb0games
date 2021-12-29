@@ -4,7 +4,8 @@
 		"title":"Turb0 Games",
 		"bio":"",
 		"blogURL":"",
-		"gitlabURL":""
+		"gitlabURL":"",
+		"commentScript":"https://script.google.com/macros/s/AKfycbx-qgiBKfSlbkynpfvpfXpEU_2ThPa3k0RSAX1bXx7CoQ2LawhfJIutQsZzYqh07jMj/exec"
 	},
 	"targets":[
 		"index.html"
@@ -30,7 +31,6 @@
 	"games":[
 		{ 
 			"rating":2,
-			"unlisted":true,
 			"repo":"https://gitlab.com/NickCopi/djam3.git",
 			"tags":["Unfinished"]
 		},

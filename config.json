@@ -23,7 +23,7 @@
 			"animation":"astar"
 		},
 		{
-			"category": "Need Art",
+			"category": "Needs Art",
 			"animation":"parametric"
 		}
 	],
@@ -57,6 +57,47 @@
 			"rating":6,
 			"repo":"https://gitlab.com/NickCopi/fromthejawsofdeath.git",
 			"tags":["Jam"]
+		},
+		{ 
+			"rating":7,
+			"repo":"https://gitlab.com/NickCopi/hammertime.git",
+			"tags":["Jam"]
+		},
+		{ 
+			"rating":6,
+			"repo":"https://gitlab.com/NickCopi/drugmakerextemeog.git",
+			"tags":["Jam"]
+		},
+		{ 
+			"rating":5,
+			"repo":"https://gitlab.com/NickCopi/blockdrop.git",
+			"tags":["Jam"]
+		},
+		{ 
+			"rating":7,
+			"repo":"https://gitlab.com/NickCopi/fourhourtower.git",
+			"tags":["Jam", "Needs Art"]
+		},
+		{ 
+			"rating":8,
+			"repo":"https://gitlab.com/NickCopi/spacegarbage.git",
+			"tags":["Jam"]
+		},
+		{ 
+			"rating":8,
+			"repo":"https://gitlab.com/NickCopi/runeshift.git",
+			"tags":["Jam","Unfinished","Needs Art"]
+		},
+		{ 
+			"rating":8,
+			"repo":"https://gitlab.com/NickCopi/mwonline.git",
+			"branch":"allinone",
+			"tags":[]
+		},
+		{ 
+			"rating":7,
+			"repo":"https://gitlab.com/NickCopi/ld46.git",
+			"tags":["Jam","Needs Art"]
 		}
 	]
 }

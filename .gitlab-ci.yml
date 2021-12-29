@@ -24,4 +24,4 @@ deploy prod:
    only:
       - tags
    script:    
-      - aws s3 sync ./build s3://games.turb0.one
+      - aws s3 sync --acl public-read ./build s3://games.turb0.one

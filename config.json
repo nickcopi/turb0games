@@ -98,6 +98,16 @@
 			"rating":7,
 			"repo":"https://gitlab.com/NickCopi/ld46.git",
 			"tags":["Jam","Needs Art"]
+		},
+		{ 
+			"rating":8,
+			"repo":"https://gitlab.com/NickCopi/ld49.git",
+			"tags":["Jam","Needs Art","Unfinished"]
+		},
+		{ 
+			"rating":6,
+			"repo":"https://gitlab.com/NickCopi/lawnmower.git",
+			"tags":["Needs Art","Unfinished"]
 		}
 	]
 }
